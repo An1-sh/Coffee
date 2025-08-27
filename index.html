@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Coffee House</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="logo"><img src="images/logo.png" alt="Coffee House Logo"></div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="navlist">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Menu</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="dark-toggle" onclick="toggleDarkMode()">🌓</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text" data-aos="fade-right">
+        <h1>Coffee Time</h1>
+        <p>“I’d rather take coffee than compliments just now.”</p>
+        <button onclick="scrollToSection('products')">Explore</button>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <img src="images/coffee split.png" alt="Coffee Art">
+      </div>
+    </section>
+
+    <section class="sec2" id="services" data-aos="fade-up">
+      <h2>Our Services</h2>
+      <div class="container">
+        <div><img src="images/services8.jpg" alt="Americano"><h4>Americano</h4></div>
+        <div><img src="images/services2.jpg" alt="Irish Coffee"><h4>Irish Coffee</h4></div>
+        <div><img src="images/services4.jpg" alt="Mocha"><h4>Mocha</h4></div>
+        <div><img src="images/services5.jpg" alt="Cappuccino"><h4>Cappuccino</h4></div>
+        <div><img src="images/services6.jpg" alt="Turkish Coffee"><h4>Turkish Coffee</h4></div>
+        <div><img src="images/services9.jpg" alt="Flat White"><h4>Flat White</h4></div>
+      </div>
+    </section>
+
+    <section class="sec3" data-aos="fade-up">
+      <div><img src="images/about.jpg" alt="About Coffee House"></div>
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>At CoffeeHouse, we’re passionate about delivering premium coffee experiences. From sourcing the finest beans to creating cozy spaces, we put love into every detail.</p>
+        <button>Read More</button>
+      </div>
+    </section>
+
+    <section class="question-box" data-aos="fade-up">
+      <h2>Any Questions?</h2>
+      <p>Ask us anything and we’ll get back to you shortly.</p>
+      <form id="questionForm">
+        <input type="text" id="questionInput" placeholder="Type your question..." required>
+        <button type="submit">Submit</button>
+        <p id="responseMsg" class="hidden">Thank you! We'll respond soon.</p>
+      </form>
+    </section>
+
+    <section class="products-section" id="products" data-aos="fade-up">
+      <h2>Our Premium Products</h2>
+      <p class="products-subtext">Carefully crafted blends for true coffee lovers.</p>
+      <div class="products-grid"></div>
+    </section>
+
+    <button class="cart-btn" onclick="toggleCart()">🛒 Cart <span id="cart-count">0</span></button>
+    <div class="cart-panel hidden" id="cart">
+      <h3>Your Cart</h3>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p>Total Items: <span id="total-items">0</span></p>
+        <p>Total Amount: $<span id="total-amount">0.00</span></p>
+      </div>
+      <div class="cart-footer">
+        <button onclick="checkoutCart()">Checkout</button>
+        <button onclick="clearCart()">Clear Cart</button>
+      </div>
+    </div>
+
+    <section class="contact-section" id="contact" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="contactResponse" class="hidden">✅ Thanks! We’ll be in touch soon.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" data-aos="fade-up">
+    <p>© 2025 Coffee House. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@coffeehouse.com">info@coffeehouse.com</a> | Phone: <a href="tel:+9779800000000">+977-9800000000</a></p>
+    <div class="social-icons">
+      <!-- Social SVGs... -->
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>

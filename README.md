@@ -4,7 +4,7 @@ A modern, responsive landing page for a coffee brand, built with **HTML**, **CSS
 
 ## 🚀 Live Demo
 
-🔗 [View Live]
+🔗 [View Live] [coffee-two-omega.vercel.app}
 
 
 ## 🛠️ Tech Stack
